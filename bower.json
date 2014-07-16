@@ -1,0 +1,17 @@
+{
+  "name": "uberEmailer",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular-mocks": "~1.3.0",
+    "angular-resource": "~1.3.0",
+    "angular": "~1.3.0",
+    "underscore": "~1.5.2",
+    "angular-bootstrap": "*",
+    "angular-sanitize": "*",
+    "angular-ui-router": "*"
+  },
+  "resolutions": {
+    "angular": "~1.3.0"
+  }
+}

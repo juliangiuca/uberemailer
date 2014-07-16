@@ -1,0 +1,24 @@
+!!!
+%html{"data-framework" => "angularjs", :lang => "en", "ng-app" => "uberEmailer"}
+  %head
+    %link{rel: "stylesheet", href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"}
+
+    %script{src: "/assets/components/angular/angular.js"}
+    %script{src: "/assets/components/angular-resource/angular-resource.js"}
+    %script{src: "/assets/components/angular-ui-router/release/angular-ui-router.min.js"}
+    %script{src: "/assets/components/angular-sanitize/angular-sanitize.js"}
+    %script{src: "/assets/components/angular-bootstrap/ui-bootstrap.js"}
+    %script{src: "/assets/components/angular-bootstrap/ui-bootstrap-tpls.js"}
+    %script{src: "/assets/components/underscore/underscore.js"}
+
+    %link{href: "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel: "stylesheet"}
+
+    %script{:src => "app/app.js", :type => "text/javascript"}
+    - %w(routes directives controllers).each do |type|
+      - Dir.glob(File.join(RACK_ROOT, "public", "app", type, "*.js")).each do |file|
+        %script{:src => "app/#{type}/#{File.basename(file)}", :type => "text/javascript"}
+
+
+    %title
+  %body
+    %ui-view
