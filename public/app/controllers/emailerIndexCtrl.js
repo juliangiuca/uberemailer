@@ -5,8 +5,10 @@ uberEmailer.controller("EmailerIndexCtrl", ["$scope", "$http",
   $scope.emailFrom = undefined;
   $scope.emailSubject = undefined;
   $scope.emailBody = undefined;
+  $scope.sending = false
 
   $scope.sendEmail = function () {
+    $scope.sending = true
 
     var email = {
       to:       $scope.emailTo,
@@ -17,7 +19,7 @@ uberEmailer.controller("EmailerIndexCtrl", ["$scope", "$http",
 
     $http.post("/api/v1/send", email)
     .then(function (response) {
-      console.log(response.data)
+      $scope.sending = false
     })
   }
 }])
