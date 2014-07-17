@@ -51,6 +51,7 @@ the job in the queue with an exponential backoff.
 * Persist the emails and the response to a database, and tie those entries to a users session.
 This would essenailly allow someone to have a history of the emails. Unless the clear their cookies!
 * Add HTML to the emails. Pretty easy with TextAngular. Didn't have time =(
+* Auth. Make people OAuth in, and lock the "from" to their email address.
 
 ### License
 MIT License
