@@ -50,6 +50,7 @@ the job in the queue with an exponential backoff.
 * I'd like to add some user feedback when the email is successfully or fails
 * Persist the emails and the response to a database, and tie those entries to a users session.
 This would essenailly allow someone to have a history of the emails. Unless the clear their cookies!
+* Add HTML to the emails. Pretty easy with TextAngular. Didn't have time =(
 
 ### License
 MIT License
