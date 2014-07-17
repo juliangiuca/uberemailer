@@ -13,7 +13,6 @@ module Email
       begin
         post_request && successful?
       rescue => e
-        puts e
         false
       end
     end

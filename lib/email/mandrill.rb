@@ -14,7 +14,6 @@ module Email
       begin
         post_request && successful?
       rescue => e
-        puts e
         #Swallow all the things. This means timeouts, conn errs.
         false
       end
