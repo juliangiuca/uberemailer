@@ -2,7 +2,9 @@
 [Coding exercise](https://github.com/uber/coding-challenge-tools) from Uber.
 
 ### What is it?
-A simple emailer with failover via Mailgun then Mandrill. It allows
+[See it in action](http://uber-emailer.herokuapp.com/)!
+
+UberEmailer is a simple emailer with failover via Mailgun then Mandrill. It allows
 you to send an email from an address of your choosing, to a recipient of your
 choosing.  
 
