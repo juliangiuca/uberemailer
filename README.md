@@ -47,11 +47,12 @@ rspec
 * Given this is an exercise in fault tolerance, I would probably put the email
 processing into an async queue (like Resque), and handle the errors by re-listing
 the job in the queue with an exponential backoff.
-* I'd like to add some user feedback when the email is successfully or fails
+* I'd like to add some user feedback when the email is successfully or fails (JS error handling)
 * Persist the emails and the response to a database, and tie those entries to a users session.
 This would essenailly allow someone to have a history of the emails. Unless the clear their cookies!
 * Add HTML to the emails. Pretty easy with TextAngular. Didn't have time =(
 * Auth. Make people OAuth in, and lock the "from" to their email address.
+* Controller tests to make sure the error handling works when sending fails.
 
 ### License
 MIT License
